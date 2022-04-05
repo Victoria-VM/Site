@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+.container{
+    width: 90%;
+    margin: 0px auto;
+    min-height: 100%;
+}
+.header{
+    height: 60px;
+    background-color: #fefefe;
+    box-shadow: 0 0 10px 0px black;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 4;
+}
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu{
+    width: 50%;
+}
+.section{
+    height: 100vh;
+    padding-top: 60px;
+}
+.fon{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    position: relative;
+    z-index: -10;
+}
+#about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+#works{
+    background-image: url(../img/bg2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#contact{
+    background-color: #fefefe;
+    height: 95vh;
+}
+.footer{
+    height: 5vh;
+    text-align: center;
+    font-family: 'Bungee', cursive;
+}
+a{
+    color: #212121;
+    text-transform: uppercase;
+}
+.logo{
+    color: #212121;
+    font-size: 36px;
+    font-family: 'Bungee', cursive;
+
+}
+.logo span{
+    color: #879c36;
+}
+.menu-link{
+    font-size:20px;
+    font-family: 'Secular One', sans-serif;
+    border-radius: 20px;
+    padding: 6px 15px;
+}
+.contacts-info{
+    font-family: 'Josefin Sans', sans-serif;
+    width: 30%;
+    font-size: 20px;
+}
+.contacts-map{
+    width: 70%;
+    height: 70vh;
+    border:10px solid #879c36;
+}
+.email{
+    height: 40px;
+}
+.menu-link:hover{
+    background: #879c36;
+    color: #fefefe;
+}
+.btn{
+    background:none;
+    color: #879c36;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    min-width: 200px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    overflow: hidden;
+}
+.btn span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #e6e9ed, #9db802);
+    animation: animate1 2s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+.btn span:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 0; 
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #e6e9ed, #9db802);
+    animation: animate2 2s linear infinite;
+}
+@keyframes animate2{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+.btn span:nth-child(3){
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left, #e6e9ed, #9db802);
+    animation: animate3 2s linear infinite;
+}
+@keyframes animate3{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.btn span:nth-child(4){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to top, #e6e9ed, #9db802);
+    animation: animate4 2s linear infinite;
+}
+@keyframes animate4{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+.btn__home{
+    position:absolute;
+    bottom: 50px;
+    left: 40px;
+}
+.btn__about{
+    border: 2px solid #879c36;
+    position:absolute;
+    top: 200px;
+}
+.btn:hover{
+    color: #fff;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #879c36;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+}
+.btn__home::before{
+    transform: scaleX(0);
+}
+.btn__home:hover::before{
+    transform: scaleX(1);
+}
+.btn__about::before{
+    transform: scaleY(0);
+}
+.btn__about:hover::before{
+    transform: scaleY(1);
+}
+.box{
+   position: absolute;
+   width: 30%;
+   height: 90vh;
+}
+.border{
+    width: 75%;
+    height: 50vh;
+    border: 15px double #879c36;
+    position: relative;
+    bottom: 45%;
+    left: 10%;
+}
+.img{
+   width: 70%;
+   height: 60vh;
+   position: relative;
+   top: 20%;
+   left: 20%;
+   background-image:url(../img/about1.png);
+   background-repeat: no-repeat;
+   background-position: center;
+}
+.text{
+    width: 50%;
+    color: #212121;
+    position: relative;
+    left: 40%;
+}
+.text h2{
+    height: 10vh;
+    font-size:40px;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+}
+.text h2 span{
+    color: #879c36;
+}
+.text p{
+    height: 20vh;
+    font-size:20px;
+    font-family: 'Roboto', sans-serif;
+}
+*, *::before,*::after{
+    box-sizing: border-box;
+}
+.content__image {
+    width: 100%;
+    height: 100vh;
+        
+}
+.image {
+    width: 30%;
+    height: 70vh;
+    border:10px solid #879c36;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+}
+.image:nth-child(1) {
+    background-image: url(../img/project1.png);
+}
+.image:nth-child(2) {
+    background-image: url(../img/project2.png);
+}
+.image:nth-child(3) {
+    background-image: url(../img/project3.png);
+}
+.image::before {
+    content: 'My Project';
+    font-family: 'Fredoka One', cursive;
+    font-size: 20px;
+    background-color: #879c36;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    right: 3%;
+    bottom: 3%;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    transition: 0.2s;
+    transform: scaleX(0);
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+.image:hover::before{
+    transform: scale(1)
+}
+.image::after{
+    content: "";
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    right: 3%;
+    bottom: 3%;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    transition: 0.2s;
+    transform: scaleY(0);
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+.image:hover::before,
+.image:hover::after{
+    transform: scale(1);
+}
